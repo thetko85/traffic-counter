@@ -1,0 +1,19 @@
+{
+  "configurations": [
+  {
+    "type": "scala",
+    "request": "launch",
+    "name": "Traffic Counter",
+    "mainClass": "au.com.thetko.trafficcounter.Main",
+    "args": ["${input:csvfile}"],
+    "jvmOptions":["-Dspark.master=local[*]"],
+  }
+  ],
+  "inputs": [{
+    "type": "promptString",
+    "description": "Traffic Counter CSV file path",
+    "id": "csvfile",
+    "default": "/workspaces/traffic_counter/src/test/resources/traffic_count.csv"
+  }
+  ]
+}
